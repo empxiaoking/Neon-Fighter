@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>霓虹战机 · Neon Fighter</title>
+    <meta name="description" content="一款融合赛博朋克美术与暗黑4风格深度技能树的俯视角弹幕射击游戏" />
+    <meta name="author" content="Neon Fighter" />
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="霓虹战机 · Neon Fighter" />
+    <meta property="og:description" content="一款融合赛博朋克美术与暗黑4风格深度技能树的俯视角弹幕射击游戏" />
+    <meta property="og:type" content="website" />
+    <!-- 游戏暗色全屏背景，防闪烁 -->
+    <style>
+      html, body, #root { height: 100%; margin: 0; padding: 0; background: #000; overflow: hidden; }
+    </style>
+    <!-- GitHub Pages SPA 路由回退：从 404.html 恢复原始路径 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
