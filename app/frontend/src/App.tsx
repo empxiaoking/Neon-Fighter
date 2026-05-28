@@ -11,6 +11,9 @@ import AuthError from './pages/AuthError';
 // 本地 file:// 双击打开时回退到 HashRouter
 const isFileProtocol = typeof window !== 'undefined' && window.location.protocol === 'file:';
 const Router = isFileProtocol ? HashRouter : BrowserRouter;
+// 部署在子路径（如 /Neon-Fighter/）时，需要设置 basename 才能正确匹配路由
+const baseUrl = import.meta.env.BASE_URL;
+const basename = baseUrl !== '/' ? baseUrl.replace(/\/$/, '') : undefined;
 // MODULE_IMPORTS_START
 // MODULE_IMPORTS_END
 
@@ -33,7 +36,7 @@ const App = () => (
     {/* MODULE_PROVIDERS_END */}
     <TooltipProvider>
       <Toaster />
-      <Router>
+      <Router basename={basename}>
         <AppRoutes />
       </Router>
     </TooltipProvider>
