@@ -10,8 +10,6 @@ pnpm install
 pnpm dev        # 启动开发服务器 (http://localhost:3000)
 ```
 
-或直接双击 `启动游戏.bat` 选择模式。
-
 ## 生产构建
 
 ```bash
